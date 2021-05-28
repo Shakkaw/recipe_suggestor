@@ -75,7 +75,7 @@ def main():
     while True:
         
         user_choice = input("Press 1 to pick a recipe, press 2 to add a new recipe to the database. Enter to quit. ") #this is the main menu for the program, user can pick where to go
-        while user_choice not in ('1', '2'):
+        while user_choice not in ('1', '2',''):
             user_choice = input("You did not give a valid input! Try again or press Enter to quit. ")
         if user_choice == '1':
             ing_choice = input("Write 'random' for a random recipe from the database, \nWrite the desired ingredient (ex:'chicken') to get a recipe with that ingredient: ").lower().strip() # strips of spaces and sets to lower case so we don't encounter errors in the search by ingredient                                                
@@ -87,7 +87,7 @@ def main():
         elif user_choice == '2':
             add_recipe()           
             #we don't break after add_recipe so the user can add multiple recipes without needing to relaunch the program    
-        elif user_choice == "":
+        elif user_choice == '':
             break
         
 
