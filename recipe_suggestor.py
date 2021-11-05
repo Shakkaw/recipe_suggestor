@@ -63,9 +63,9 @@ def pick_recipe_by_ingredient(ing_choice):
             print('Sorry, there is no recipe with that ingredient, try adding one for next time')
         else:                                                                 #when there is matches, it will pick one at random, and once again give that name and the full list of ingredients
             recipe_generated = random.choice(recipes_with_user_ingredient)
-            print('How about cooking the recipe: ' + str(recipe_generated[0]))
+            print('\nHow about cooking the recipe: ' + str(recipe_generated[0]))
             print('This are the ingredients of the recipe ' + str(recipe_list[recipe_generated[0]]['ingredients']))
-                
+
 def main():
 
     ''' 
@@ -76,9 +76,9 @@ def main():
         
         user_choice = input("Press 1 to pick a recipe, press 2 to add a new recipe to the database. Enter to quit. ") #this is the main menu for the program, user can pick where to go
         while user_choice not in ('1', '2',''):
-            user_choice = input("You did not give a valid input! Try again or press Enter to quit. ")
+            user_choice = input("\nYou did not give a valid input! Try again or press Enter to quit. ")
         if user_choice == '1':
-            ing_choice = input("Write 'random' for a random recipe from the database, \nWrite the desired ingredient (ex:'chicken') to get a recipe with that ingredient: ").lower().strip() # strips of spaces and sets to lower case so we don't encounter errors in the search by ingredient                                                
+            ing_choice = input("\nWrite 'random' for a random recipe from the database, \nWrite the desired ingredient (ex:'chicken') to get a recipe with that ingredient: ").lower().strip() # strips of spaces and sets to lower case so we don't encounter errors in the search by ingredient                                                
             if ing_choice == 'random':
                 pick_random_recipe()
             else:
